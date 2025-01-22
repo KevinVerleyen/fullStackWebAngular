@@ -1,0 +1,20 @@
+<div class="profil-utilisateur">
+    <h2>Gestion du profil Utilisateur</h2>
+
+    <!-- Property binding (one-way) : Affichage des informations de l'utilisateur -->
+    <p>nom : {{nom}}</p>
+    <p>email : {{email}}</p>
+    <p>age : {{age}}</p>
+
+    <button (click)="changementEtatModif()">{{enEdition ? 'Annuler La modification' : 'Modifier le profil'}}</button>
+
+    @if (enEdition) {
+        <div>
+            <!-- Property binding (two-way) -->
+            <input type="text" [(ngModel)]="nom">
+            <input type="email" [(ngModel)]="email">
+            <input type="number" [(ngModel)]="age">
+            <button (click)="sauvegardeModif()" [attr.disabled]="!nom || !email || age <= 0 ? true : null">Sauvegarder</button>
+        </div>
+    }
+</div>
