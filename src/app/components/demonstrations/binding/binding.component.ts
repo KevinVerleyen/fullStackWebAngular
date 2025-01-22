@@ -20,5 +20,6 @@ export class BindingComponent {
 
     sauvegardeModif(){
         this.changementEtatModif();
+        this.nom = "";
     }
 }

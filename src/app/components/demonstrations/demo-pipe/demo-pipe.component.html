@@ -1,0 +1,16 @@
+<fieldset>
+    <legend>Pipe integrés</legend>
+    <p>Nom en majuscule : {{personne.nomUtilisateur | uppercase}}</p>
+    <p>Nom en minuscule : {{personne.nomUtilisateur | lowercase}}</p>
+
+    <p>Date actuelle formatée : {{personne.dateActelle | date:'short'}}</p>
+
+    <p>Salaire formaté : {{personne.salaire | currency:'JPY'}}</p>
+
+    <p>Taux de réduction : {{personne.tauxReduction | percent}}</p>
+</fieldset>
+
+<fieldset>
+    <p>Titre original : {{titre}}</p>
+    <p>Acronyme généré : {{titre | acronyme}}</p>
+</fieldset>

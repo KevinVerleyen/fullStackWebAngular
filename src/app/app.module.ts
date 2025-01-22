@@ -7,13 +7,19 @@ import { BindingComponent } from './components/demonstrations/binding/binding.co
 import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 import { HomeComponent } from './components/shared/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { ExoBindingComponent } from './components/exercices/exo-binding/exo-binding.component';
+import { DemoPipeComponent } from './components/demonstrations/demo-pipe/demo-pipe.component';
+import { AcronymePipe } from './tools/pipe-custom/acronyme.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BindingComponent,
     NavBarComponent,
-    HomeComponent
+    HomeComponent,
+    ExoBindingComponent,
+    DemoPipeComponent,
+    AcronymePipe
   ],
   imports: [
     BrowserModule,

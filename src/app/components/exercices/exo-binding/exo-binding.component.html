@@ -1,0 +1,10 @@
+<div>
+    <h2>{{produit.nom}}</h2>
+    <p>Prix : {{produit.prix | currency : 'EUR'}}</p>
+    <p [hidden]="!produit.disponible">En stock</p>
+
+    <button (click)="modifierPrix()">Augmenter le prix </button>
+    <button (click)="acheter()" >Acheter</button>
+
+    
+</div>
