@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ExoBindingComponent } from './components/exercices/exo-binding/exo-binding.component';
 import { DemoPipeComponent } from './components/demonstrations/demo-pipe/demo-pipe.component';
 import { AcronymePipe } from './tools/pipe-custom/acronyme.pipe';
+import { ListeProduitComponent } from './components/exercices/liste-produit/liste-produit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AcronymePipe } from './tools/pipe-custom/acronyme.pipe';
     HomeComponent,
     ExoBindingComponent,
     DemoPipeComponent,
-    AcronymePipe
+    AcronymePipe,
+    ListeProduitComponent
   ],
   imports: [
     BrowserModule,

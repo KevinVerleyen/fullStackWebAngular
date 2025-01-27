@@ -14,17 +14,17 @@ export class ExoBindingComponent {
     // Ajoutez un bouton permettant d'augmenter dynamiquement le prix du produit grâce à Event Binding.
     // Implémentez également un bouton d'achat, qui devient désactivé lorsque le produit est acheté, en utilisant Attribute Binding.
     produit : Produit = {
-        nom : "Ordinateur portable",
-        prix : 1500,
-        disponible : true
+        Nom : "Ordinateur portable",
+        Prix : 1500,
+        Disponible : true
     }
 
     modifierPrix(){
-        this.produit.prix += 100;
+        this.produit.Prix += 100;
     }
 
     acheter(){
         alert("Achat effectué !!!");
-        this.produit.disponible = false;
+        this.produit.Disponible = false;
     }
 }

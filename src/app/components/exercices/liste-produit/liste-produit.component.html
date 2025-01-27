@@ -1,0 +1,26 @@
+
+
+@if (produits.length > 0) {
+    @for (produit of produits; track $index) {
+        <ul>
+            <li>
+                <fieldset>
+                    <legend><p>{{produit.Nom}}</p></legend>
+                    <p [ngClass]="{'cher': produit.Prix > 500}">Prix :{{produit.Prix | currency : 'EUR'}}</p>
+                    <p>Catégorie : {{produit.Categorie}}</p>
+                    <p [ngStyle]="{color: produit.DateAjout!.getFullYear() < anneActuelle ? 'red' : 'green'}">Date d'ajout : {{produit.DateAjout | date:'dd/MM/yy'}}</p>
+                    @switch (produit.Disponible) {
+                        @case (true) {
+                            <p>Statut : Disponible</p>
+                        }
+                        @default {
+                            <p>Statut : Indisponible</p>
+                        }
+                    }
+                </fieldset>
+            </li>
+        </ul>
+    }
+} @else {
+    <p>La liste de produit est vide...</p>
+}

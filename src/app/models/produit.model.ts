@@ -1,5 +1,7 @@
 export interface Produit{
-    nom : string;
-    prix : number;
-    disponible : boolean;
+    Nom : string;
+    Prix : number;
+    Disponible : boolean;
+    Categorie? : string;
+    DateAjout? : Date;
 }
