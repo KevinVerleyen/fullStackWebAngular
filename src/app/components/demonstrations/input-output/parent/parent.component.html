@@ -1,0 +1,9 @@
+<ul>
+    @for (commande of commandes; track commande.Id){
+        <app-enfant
+            [commande] = "commande"
+            (suppressionEnfant) = "supprimerParId($event)"
+            (updateEnfant)="updateEnfant($event)"
+        ></app-enfant>
+    }
+</ul>

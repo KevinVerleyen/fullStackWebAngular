@@ -11,6 +11,8 @@ import { ExoBindingComponent } from './components/exercices/exo-binding/exo-bind
 import { DemoPipeComponent } from './components/demonstrations/demo-pipe/demo-pipe.component';
 import { AcronymePipe } from './tools/pipe-custom/acronyme.pipe';
 import { ListeProduitComponent } from './components/exercices/liste-produit/liste-produit.component';
+import { ParentComponent } from './components/demonstrations/input-output/parent/parent.component';
+import { EnfantComponent } from './components/demonstrations/input-output/enfant/enfant.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ListeProduitComponent } from './components/exercices/liste-produit/list
     ExoBindingComponent,
     DemoPipeComponent,
     AcronymePipe,
-    ListeProduitComponent
+    ListeProduitComponent,
+    ParentComponent,
+    EnfantComponent
   ],
   imports: [
     BrowserModule,
