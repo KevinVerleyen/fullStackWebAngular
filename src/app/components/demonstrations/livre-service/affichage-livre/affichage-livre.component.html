@@ -1,0 +1,10 @@
+@if (livres.length > 0) {
+    <ul>
+        @for (livre of livres; track livre.Id) {
+            <li>
+                {{livre.Id}} ➡️ {{livre.Titre}}
+                <button (click)="supprimer(livre.Id)">supprimer</button>
+            </li>
+        }
+    </ul>
+}
