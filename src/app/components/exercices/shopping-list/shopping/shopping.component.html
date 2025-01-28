@@ -1,0 +1,3 @@
+<h1>Shopping list (input output)</h1>
+<app-ajout (ajouterArticleEvent)="AjouterArticleParent($event)"></app-ajout>
+<app-affichage [articlesEnfant]="articlesParent" (supprimerArticleEvent)="SupprimerArticle($event)"></app-affichage>

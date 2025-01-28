@@ -13,6 +13,9 @@ import { AcronymePipe } from './tools/pipe-custom/acronyme.pipe';
 import { ListeProduitComponent } from './components/exercices/liste-produit/liste-produit.component';
 import { ParentComponent } from './components/demonstrations/input-output/parent/parent.component';
 import { EnfantComponent } from './components/demonstrations/input-output/enfant/enfant.component';
+import { ShoppingComponent } from './components/exercices/shopping-list/shopping/shopping.component';
+import { AjoutComponent } from './components/exercices/shopping-list/ajout/ajout.component';
+import { AffichageComponent } from './components/exercices/shopping-list/affichage/affichage.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { EnfantComponent } from './components/demonstrations/input-output/enfant
     AcronymePipe,
     ListeProduitComponent,
     ParentComponent,
-    EnfantComponent
+    EnfantComponent,
+    ShoppingComponent,
+    AjoutComponent,
+    AffichageComponent
   ],
   imports: [
     BrowserModule,
