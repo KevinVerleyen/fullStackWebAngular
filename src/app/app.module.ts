@@ -20,6 +20,8 @@ import { LivreServiceComponent } from './components/demonstrations/livre-service
 import { AffichageLivreComponent } from './components/demonstrations/livre-service/affichage-livre/affichage-livre.component';
 import { ShoppingListServiceComponent } from './components/exercices/shopping-list-service/shopping-list-service.component';
 import { FormulaireComponent } from './components/demonstrations/formulaire/formulaire.component';
+import { RoutingComponent } from './components/demonstrations/routing/routing/routing.component';
+import { ProfilUserComponent } from './components/demonstrations/routing/profil-user/profil-user.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { FormulaireComponent } from './components/demonstrations/formulaire/form
     LivreServiceComponent,
     AffichageLivreComponent,
     ShoppingListServiceComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    RoutingComponent,
+    ProfilUserComponent
   ],
   imports: [
     BrowserModule,

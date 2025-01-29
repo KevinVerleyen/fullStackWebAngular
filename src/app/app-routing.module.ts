@@ -10,6 +10,8 @@ import { ShoppingComponent } from './components/exercices/shopping-list/shopping
 import { LivreServiceComponent } from './components/demonstrations/livre-service/livre-service.component';
 import { ShoppingListServiceComponent } from './components/exercices/shopping-list-service/shopping-list-service.component';
 import { FormulaireComponent } from './components/demonstrations/formulaire/formulaire.component';
+import { RoutingComponent } from './components/demonstrations/routing/routing/routing.component';
+import { ProfilUserComponent } from './components/demonstrations/routing/profil-user/profil-user.component';
 
 const routes: Routes = [
     // Redirection automatique lorsque je n'ai aucun url de charger
@@ -21,7 +23,9 @@ const routes: Routes = [
             { path: 'pipe', component: DemoPipeComponent },
             { path: 'input-output', component: ParentComponent },
             { path: 'service', component: LivreServiceComponent },
-            { path: 'formulaire', component: FormulaireComponent }
+            { path: 'formulaire', component: FormulaireComponent },
+            { path: 'routing', component: RoutingComponent },
+            { path: 'profil/:id', component: ProfilUserComponent }
         ]
     },
 
