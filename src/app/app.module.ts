@@ -18,6 +18,7 @@ import { AjoutComponent } from './components/exercices/shopping-list/ajout/ajout
 import { AffichageComponent } from './components/exercices/shopping-list/affichage/affichage.component';
 import { LivreServiceComponent } from './components/demonstrations/livre-service/livre-service.component';
 import { AffichageLivreComponent } from './components/demonstrations/livre-service/affichage-livre/affichage-livre.component';
+import { ShoppingListServiceComponent } from './components/exercices/shopping-list-service/shopping-list-service.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AffichageLivreComponent } from './components/demonstrations/livre-servi
     AjoutComponent,
     AffichageComponent,
     LivreServiceComponent,
-    AffichageLivreComponent
+    AffichageLivreComponent,
+    ShoppingListServiceComponent
   ],
   imports: [
     BrowserModule,

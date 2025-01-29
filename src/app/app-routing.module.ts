@@ -8,6 +8,7 @@ import { ExoBindingComponent } from './components/exercices/exo-binding/exo-bind
 import { ParentComponent } from './components/demonstrations/input-output/parent/parent.component';
 import { ShoppingComponent } from './components/exercices/shopping-list/shopping/shopping.component';
 import { LivreServiceComponent } from './components/demonstrations/livre-service/livre-service.component';
+import { ShoppingListServiceComponent } from './components/exercices/shopping-list-service/shopping-list-service.component';
 
 const routes: Routes = [
     // Redirection automatique lorsque je n'ai aucun url de charger
@@ -26,7 +27,8 @@ const routes: Routes = [
         path: 'exercices', children: [
             { path: 'binding', component: ExoBindingComponent },
             { path: 'directive', component : ListeProduitComponent},
-            { path: 'shopping-list', component : ShoppingComponent}
+            { path: 'shopping-list', component : ShoppingComponent},
+            { path: 'shopping-list-service', component : ShoppingListServiceComponent}
         ]
     },
 ];

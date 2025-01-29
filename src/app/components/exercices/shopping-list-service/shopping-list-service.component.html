@@ -1,0 +1,20 @@
+<h1>Liste de course (Service)</h1>
+<fieldset>
+    <legend>Ajout d'article</legend>
+    <input type="text" [(ngModel)]="newArticleNom" placeholder="Nom d'article...">
+    <input type="number" [(ngModel)]="newArticleQantite">
+    <button (click)="AjouterArticle()">Ajouter</button>
+</fieldset>
+<fieldset>
+    <legend>Affichage (Total : {{articles.length}})</legend>
+    <ul>
+        @for (article of articles; track article.Nom){
+            <li>
+                {{article.Nom}} {{article.Quantite}}
+                <button (click)="UpdateQuantite(article.Nom, '+')">➕</button>
+                <button (click)="UpdateQuantite(article.Nom, '-')">➖</button>
+                <button (click)="SupprimerArticle(article.Nom)">❌</button>
+            </li>
+        }
+    </ul>
+</fieldset>

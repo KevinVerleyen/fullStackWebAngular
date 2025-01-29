@@ -25,6 +25,6 @@ export class DemoServiceService {
     SupprimerLivre(id : number) : void{
         const index  : number = this.livres.findIndex(livre => livre.Id === id)
         this.livres.splice(index, 1);
-        // this.nextId --;
+        this.nextId = this.livres.length + 1;
     }
 }
