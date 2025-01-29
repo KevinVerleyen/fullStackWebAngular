@@ -1,0 +1,70 @@
+
+<fieldset>
+    <legend>Formulaire</legend>
+    <form [formGroup]="formulaire" (ngSubmit)="valider()">
+        <div>
+            <label for="nom">Nom </label>
+            <input type="text" id="nom" formControlName="nom" placeholder="encodez un nom">
+            @if (formulaire.controls['nom'].errors?.['required'] && formulaire.controls['nom'].touched) {
+                <p>Le nom est requis...</p>
+            }
+        </div>
+
+        <div>
+            <label for="age">Age </label>
+            <input type="number" id="age" formControlName="age">
+            @if (formulaire.controls['age'].errors?.['required'] && formulaire.controls['age'].touched) {
+                <p>L'age est requis...</p>
+            }
+            @if (formulaire.controls['age'].invalid && formulaire.controls['age'].touched) {
+                <p>{{formulaire.controls['age'].getError('erreurAge')}}</p>
+            }
+        </div>
+
+        <div>
+            <label for="email">Email </label>
+            <input type="email" id="email" formControlName="email">
+            @if (formulaire.controls['email'].errors?.['required'] && formulaire.controls['email'].touched) {
+                <p>L'email est requis...</p>
+            }
+        </div>
+
+        <div>
+            <label>Genre </label>
+            <label><input type="radio" value="Homme" formControlName="genre">Homme</label>
+            <label><input type="radio" value="Femme" formControlName="genre">Femme</label>
+            @if (formulaire.controls['genre'].errors?.['required'] && formulaire.controls['genre'].touched) {
+                <p>Le genre est requis...</p>
+            }
+        </div>
+
+        <div formArrayName="hobbies">
+            @for (hobbie of hobbies.controls; track $index) {
+                <div>
+                    <label for="hobbie">Hobbie nr : {{$index+1}}</label>
+                    <input type="text" id="hobbie" formControlName="{{$index}}" placeholder="Encodez votre hobbie..." formControlName="hobbie">
+                </div>
+            }
+            <button (click)="ajouterHobbie()">➕</button>
+        </div>
+
+        <div>
+            <label for="pays">Pays </label>
+            <select id="pays" formControlName="pays">
+                <option value="">Sélectionner un pays</option>
+                <hr>
+                <option value="be">Belgique</option>
+                <option value="fr">France</option>
+                <option value="us">États-unis</option>
+            </select>
+            @if (formulaire.controls['pays'].errors?.['required'] && formulaire.controls['pays'].touched) {
+                <p>Le pays est requis...</p>
+            }
+        </div>
+        <button type="submit" [disabled]="formulaire.invalid">Envoyer</button>
+
+        @if (complet) {
+            <p>{{formulaire.value | json}}</p>
+        }
+    </form>
+</fieldset>

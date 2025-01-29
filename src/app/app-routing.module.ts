@@ -9,6 +9,7 @@ import { ParentComponent } from './components/demonstrations/input-output/parent
 import { ShoppingComponent } from './components/exercices/shopping-list/shopping/shopping.component';
 import { LivreServiceComponent } from './components/demonstrations/livre-service/livre-service.component';
 import { ShoppingListServiceComponent } from './components/exercices/shopping-list-service/shopping-list-service.component';
+import { FormulaireComponent } from './components/demonstrations/formulaire/formulaire.component';
 
 const routes: Routes = [
     // Redirection automatique lorsque je n'ai aucun url de charger
@@ -19,7 +20,8 @@ const routes: Routes = [
             { path: 'binding', component: BindingComponent },
             { path: 'pipe', component: DemoPipeComponent },
             { path: 'input-output', component: ParentComponent },
-            { path: 'service', component: LivreServiceComponent }
+            { path: 'service', component: LivreServiceComponent },
+            { path: 'formulaire', component: FormulaireComponent }
         ]
     },
 
