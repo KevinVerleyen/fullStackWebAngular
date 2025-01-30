@@ -1,0 +1,24 @@
+<h1>Liste de fans</h1>
+<div>
+    <button routerLink="/exercices/ajout-fan">Ajouter un nouveau fan</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Date de naissance</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (fan of fans; track fan.Id){
+                <tr>
+                    <td>{{fan.Id}}</td>
+                    <td>{{fan.Nom}}</td>
+                    <td>{{fan.DateNaissance | date:'dd/MM/yyyy'}}</td>
+                    <td><button (click)="Details(fan.Id)">Détails</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

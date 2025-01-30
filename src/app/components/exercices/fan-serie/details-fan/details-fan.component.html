@@ -1,0 +1,20 @@
+<h1>Détails profil</h1>
+
+@if (fan) {
+    <p>Nom : {{fan.Nom}}</p>
+    <p>Date de naissance : {{fan.DateNaissance | date :'dd/MM/yy'}}</p>
+
+    <p>Séries préférées</p>
+    <ul>
+        @for (serie of fan.Series; track $index) {
+            <li>{{serie}}</li>
+        }
+    </ul>
+} @else {
+    <p>Fan introuvable ou inexistant...</p>
+}
+<button routerLink="/exercices/fan-serie">Retour à la liste</button>
+@if (trouver) {
+    <button (click)="moddifierFan()">Mise à jour</button>
+    <button (click)="supressionFan()">Supression</button>
+}

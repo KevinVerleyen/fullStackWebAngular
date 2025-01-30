@@ -1,0 +1,50 @@
+<h1>Ajouter Fan</h1>
+<form [formGroup]="ajoutFanForm" (ngSubmit)="AjouterFan()">
+
+    <div id="input-nom">
+        <label for="nom">Nom </label>
+        <input type="text" id="nom" formControlName="nom">
+        @if (ajoutFanForm.get('nom')?.invalid && ajoutFanForm.get('nom')?.touched) {
+            @if (ajoutFanForm.get('nom')?.errors?.['required']) {
+                <p>Le nom est obligatoire</p>
+            }
+        }
+    </div>
+
+    <div id="date-naissance">
+        <label for="date-naissance">date de naissance</label>
+        <input type="date" id="date-naissance" formControlName="dateNaissance">
+        @if (ajoutFanForm.get('dateNaissance')?.invalid && ajoutFanForm.get('dateNaissance')?.touched) {
+            @if (ajoutFanForm.get('dateNaissance')?.errors?.['required']) {
+                <p>La dateNaissance est obligatoire</p>
+            }
+            @if (ajoutFanForm.get('dateNaissance')?.errors?.['tropJeune']) {
+                <p>{{ajoutFanForm.get('dateNaissance')?.errors?.['tropJeune']}}</p>
+            }
+        }
+    </div>
+
+    <div id="input-series" formArrayName="series">
+        <button (click)="AjouterSerie()">Ajouter Une Série</button>
+        @for (seire of series.controls; track $index) {
+            <div>
+                <input type="text" formControlName="{{$index}}" placeholder="Titre de la série...">
+                @if (series.length > 1) {
+                    <button (click)="supprimerSerie($index)">Supprimer</button>
+                }
+                @if (series.invalid && series.touched) {
+                    <p>LE tritre de la série est obligatoire</p>
+                }
+            </div>
+        }
+    </div>
+
+    <div>
+        <button routerLink="/exercices/fan-serie">Annuler</button>
+        <button type="submit">Ajouter</button>
+    </div>
+
+    @if (erreurs) {
+        <p>{{erreurs}}</p>
+    }
+</form>

@@ -22,6 +22,12 @@ import { ShoppingListServiceComponent } from './components/exercices/shopping-li
 import { FormulaireComponent } from './components/demonstrations/formulaire/formulaire.component';
 import { RoutingComponent } from './components/demonstrations/routing/routing/routing.component';
 import { ProfilUserComponent } from './components/demonstrations/routing/profil-user/profil-user.component';
+import { FanSerieComponent } from './components/exercices/fan-serie/fan-serie.component';
+import { AjoutFanComponent } from './components/exercices/fan-serie/ajout-fan/ajout-fan.component';
+import { DetailsFanComponent } from './components/exercices/fan-serie/details-fan/details-fan.component';
+import { ModifierFanComponent } from './components/exercices/fan-serie/modifier-fan/modifier-fan.component';
+import { ListeFanComponent } from './components/exercices/fan-serie/liste-fan/liste-fan.component';
+import { SessionComponent } from './components/demonstrations/session/session.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +49,13 @@ import { ProfilUserComponent } from './components/demonstrations/routing/profil-
     ShoppingListServiceComponent,
     FormulaireComponent,
     RoutingComponent,
-    ProfilUserComponent
+    ProfilUserComponent,
+    FanSerieComponent,
+    AjoutFanComponent,
+    DetailsFanComponent,
+    ModifierFanComponent,
+    ListeFanComponent,
+    SessionComponent
   ],
   imports: [
     BrowserModule,

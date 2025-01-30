@@ -12,6 +12,11 @@ import { ShoppingListServiceComponent } from './components/exercices/shopping-li
 import { FormulaireComponent } from './components/demonstrations/formulaire/formulaire.component';
 import { RoutingComponent } from './components/demonstrations/routing/routing/routing.component';
 import { ProfilUserComponent } from './components/demonstrations/routing/profil-user/profil-user.component';
+import { FanSerieComponent } from './components/exercices/fan-serie/fan-serie.component';
+import { DetailsFanComponent } from './components/exercices/fan-serie/details-fan/details-fan.component';
+import { ModifierFanComponent } from './components/exercices/fan-serie/modifier-fan/modifier-fan.component';
+import { AjoutFanComponent } from './components/exercices/fan-serie/ajout-fan/ajout-fan.component';
+import { SessionComponent } from './components/demonstrations/session/session.component';
 
 const routes: Routes = [
     // Redirection automatique lorsque je n'ai aucun url de charger
@@ -25,7 +30,8 @@ const routes: Routes = [
             { path: 'service', component: LivreServiceComponent },
             { path: 'formulaire', component: FormulaireComponent },
             { path: 'routing', component: RoutingComponent },
-            { path: 'profil/:id', component: ProfilUserComponent }
+            { path: 'profil/:id', component: ProfilUserComponent },
+            { path: 'session', component: SessionComponent }
         ]
     },
 
@@ -34,7 +40,13 @@ const routes: Routes = [
             { path: 'binding', component: ExoBindingComponent },
             { path: 'directive', component : ListeProduitComponent},
             { path: 'shopping-list', component : ShoppingComponent},
-            { path: 'shopping-list-service', component : ShoppingListServiceComponent}
+            { path: 'shopping-list-service', component : ShoppingListServiceComponent},
+            { path: 'fan-serie', component : FanSerieComponent},
+
+            { path: 'details-fan/:id', component : DetailsFanComponent},
+            { path: 'ajout-fan', component : AjoutFanComponent},
+            { path: 'modifier-fan/:id', component : ModifierFanComponent},
+
         ]
     },
 ];

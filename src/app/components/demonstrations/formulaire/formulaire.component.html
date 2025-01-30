@@ -42,7 +42,7 @@
             @for (hobbie of hobbies.controls; track $index) {
                 <div>
                     <label for="hobbie">Hobbie nr : {{$index+1}}</label>
-                    <input type="text" id="hobbie" formControlName="{{$index}}" placeholder="Encodez votre hobbie..." formControlName="hobbie">
+                    <input type="text" id="hobbie" formControlName="{{$index}}" placeholder="Encodez votre hobbie...">
                 </div>
             }
             <button (click)="ajouterHobbie()">➕</button>

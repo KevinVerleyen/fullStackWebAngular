@@ -1,0 +1,22 @@
+<fieldset>
+    <legend>LocalStorage</legend>
+    <button (click)="enregistrerLocalStorage()">Sauvegarde</button>
+    <button (click)="recupererLocalStorage()">Récupération</button>
+    <button (click)="supressionLocalStorage()">Suppression</button>
+    @if (doonneeLocale) {
+        <h2>Données dans le local storage</h2>
+        <p>{{doonneeLocale | json}}</p>
+    }
+</fieldset>
+
+
+<fieldset>
+    <legend>SessionStorage</legend>
+    <button (click)="enregistrerSessionStorage()">Sauvegarde</button>
+    <button (click)="recupererSessionStorage()">Récupération</button>
+    <button (click)="supressionSessionStorage()">Suppression</button>
+    @if (doonneeSession) {
+        <h2>Données dans le session storage</h2>
+        <p>{{doonneeSession | json}}</p>
+    }
+</fieldset>

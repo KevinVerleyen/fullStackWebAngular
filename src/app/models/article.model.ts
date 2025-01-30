@@ -1,4 +1,4 @@
 export interface Article {
-    Id : number,
-    Nom : string
+    Id : number;
+    Nom : string;
 }
