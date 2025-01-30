@@ -28,44 +28,48 @@ import { DetailsFanComponent } from './components/exercices/fan-serie/details-fa
 import { ModifierFanComponent } from './components/exercices/fan-serie/modifier-fan/modifier-fan.component';
 import { ListeFanComponent } from './components/exercices/fan-serie/liste-fan/liste-fan.component';
 import { SessionComponent } from './components/demonstrations/session/session.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { ContactApiComponent } from './components/demonstrations/contact-api/contact-api.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BindingComponent,
-    NavBarComponent,
-    HomeComponent,
-    ExoBindingComponent,
-    DemoPipeComponent,
-    AcronymePipe,
-    ListeProduitComponent,
-    ParentComponent,
-    EnfantComponent,
-    ShoppingComponent,
-    AjoutComponent,
-    AffichageComponent,
-    LivreServiceComponent,
-    AffichageLivreComponent,
-    ShoppingListServiceComponent,
-    FormulaireComponent,
-    RoutingComponent,
-    ProfilUserComponent,
-    FanSerieComponent,
-    AjoutFanComponent,
-    DetailsFanComponent,
-    ModifierFanComponent,
-    ListeFanComponent,
-    SessionComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  providers: [
-    provideClientHydration(withEventReplay())
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        BindingComponent,
+        NavBarComponent,
+        HomeComponent,
+        ExoBindingComponent,
+        DemoPipeComponent,
+        AcronymePipe,
+        ListeProduitComponent,
+        ParentComponent,
+        EnfantComponent,
+        ShoppingComponent,
+        AjoutComponent,
+        AffichageComponent,
+        LivreServiceComponent,
+        AffichageLivreComponent,
+        ShoppingListServiceComponent,
+        FormulaireComponent,
+        RoutingComponent,
+        ProfilUserComponent,
+        FanSerieComponent,
+        AjoutFanComponent,
+        DetailsFanComponent,
+        ModifierFanComponent,
+        ListeFanComponent,
+        SessionComponent,
+        ContactApiComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    providers: [
+        provideClientHydration(),
+        provideHttpClient(withFetch()) // => Utilisation du module httpClient
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

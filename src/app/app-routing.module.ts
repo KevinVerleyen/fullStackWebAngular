@@ -17,6 +17,7 @@ import { DetailsFanComponent } from './components/exercices/fan-serie/details-fa
 import { ModifierFanComponent } from './components/exercices/fan-serie/modifier-fan/modifier-fan.component';
 import { AjoutFanComponent } from './components/exercices/fan-serie/ajout-fan/ajout-fan.component';
 import { SessionComponent } from './components/demonstrations/session/session.component';
+import { ContactApiComponent } from './components/demonstrations/contact-api/contact-api.component';
 
 const routes: Routes = [
     // Redirection automatique lorsque je n'ai aucun url de charger
@@ -31,7 +32,8 @@ const routes: Routes = [
             { path: 'formulaire', component: FormulaireComponent },
             { path: 'routing', component: RoutingComponent },
             { path: 'profil/:id', component: ProfilUserComponent },
-            { path: 'session', component: SessionComponent }
+            { path: 'session', component: SessionComponent },
+            { path: 'contact-api', component: ContactApiComponent }
         ]
     },
 
