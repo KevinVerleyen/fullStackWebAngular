@@ -1,21 +1,27 @@
 <h1>Constact api</h1>
 <div>
-@for (post of posts; track $index) {
-        <p>Titre : {{post.title}}</p>
-        <p>Corps : {{post.body}}</p>
-        <button (click)="etatModif()">Modiffier</button>
-        <hr>
+    @for (post of posts; track $index) {
+    <p>Titre : {{ post.title }}</p>
+    <p>Corps : {{ post.body }}</p>
+    <button (click)="etatModif()">Modiffier</button>
+    <button (click)="SupprimerPost(post.id)">Supprimer</button>
+    <hr />
 
-    }
-    @if (etaModif) {
-        <input type="text" [(ngModel)]="postModifie.title">
-        <textarea rows="5" cols="5" [(ngModel)]="postModifie.body"></textarea>
-        <button (click)="modifPost()">Enregistrer</button>
+    } @if (etaModif) {
+    <input type="text" [(ngModel)]="postModifie.title" />
+    <textarea rows="5" cols="5" [(ngModel)]="postModifie.body"></textarea>
+    <button (click)="modifPost()">Enregistrer</button>
     }
 </div>
 
 @if (messageErreur) {
-    <div>
-        {{messageErreur}}
-    </div>
+<div>
+    {{ messageErreur }}
+</div>
 }
+<div>
+    <input type="text" [(ngModel)]="nouveauPost.title" />
+    <textarea rows="5" cols="5" [(ngModel)]="nouveauPost.body"></textarea>
+    <button (click)="AjouterPost()">Ajouter</button>
+</div>
+
